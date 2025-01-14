@@ -10,7 +10,8 @@ export default function Home() {
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         if (name && age) {
-            router.push('/question');
+            alert(`Hallo, ${name}! Du bist ${age} Jahre alt.`);
+            router.push('/nextpage'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
         } else {
             alert('Bitte füllen Sie sowohl den Namen als auch das Alter aus.');
         }
@@ -19,25 +20,27 @@ export default function Home() {
     return (
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
             <h1>Gib deinen Namen und dein Alter ein:</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Dein Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    style={{ padding: '10px', fontSize: '16px' }}
-                />
-                <input
-                    type="number"
-                    placeholder="Dein Alter"
-                    value={age}
-                    onChange={(e) => setAge(e.target.value)}
-                    style={{ padding: '10px', fontSize: '16px', marginLeft: '10px' }}
-                />
-                <button type="submit" style={{ marginLeft: '10px', padding: '10px 20px' }}>
-                    Absenden
-                </button>
-            </form>
+            <div className='form flex-direction-column'>
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <input
+                        type="text"
+                        placeholder="Dein Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Dein Alter"
+                        value={age}
+                        onChange={(e) => setAge(e.target.value)}
+                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
+                    />
+                    <button type="submit" style={{ padding: '10px 20px' }}>
+                        Absenden
+                    </button>
+                </form>
+            </div>
         </div>
     );
 }
