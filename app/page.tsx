@@ -3,40 +3,75 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
-    const [name, setName] = useState('');
+    const [vorname, setVorname] = useState('');
+    const [nachname, setNachname] = useState('');
     const [age, setAge] = useState('');
+    const [geschlecht, setGeschlecht] = useState('');
+    const [abschluss, setAbschluss] = useState('');
+    const [beruf, setBeruf] = useState('');
     const router = useRouter();
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        if (name && age) {
-            alert(`Hallo, ${name}! Du bist ${age} Jahre alt.`);
+        if (age&&nachname) {
+            alert(`Hallo, ${vorname}! Du bist ${age} Jahre alt.`);
             router.push('/nextpage'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
         } else {
-            alert('Bitte füllen Sie sowohl den Namen als auch das Alter aus.');
+            alert('Bitte füllen Sie die benötigten Daten aus.');
         }
     };
 
     return (
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <h1>Gib deinen Namen und dein Alter ein:</h1>
+            <h1 style={{ marginBottom: '20px'}}>Bitte tragen Sie die benötigten Daten ein:</h1>
             <div className='form flex-direction-column'>
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <input
                         type="text"
-                        placeholder="Dein Name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
+                        placeholder="Vorname"
+                        value={vorname}
+                        onChange={(e) => setVorname(e.target.value)}
+                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Nachname"
+                        value={nachname}
+                        onChange={(e) => setNachname(e.target.value)}
+                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
                     />
                     <input
                         type="number"
-                        placeholder="Dein Alter"
+                        placeholder="Alter"
                         value={age}
                         onChange={(e) => setAge(e.target.value)}
-                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
+                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
                     />
-                    <button type="submit" style={{ padding: '10px 20px' }}>
+                    <select
+                        value={geschlecht}
+                        onChange={(e) => setGeschlecht(e.target.value)}
+                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                    >
+                        <option value="" disabled>Wähle dein Geschlecht</option>
+                        <option value="männlich">Männlich</option>
+                        <option value="weiblich">Weiblich</option>
+                        <option value="divers">Divers</option>
+                    </select>
+                    <input
+                        type="text"
+                        placeholder="Abschluss"
+                        value={abschluss}
+                        onChange={(e) => setAbschluss(e.target.value)}
+                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Beruf"
+                        value={beruf}
+                        onChange={(e) => setBeruf(e.target.value)}
+                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                    />
+                    <button type="submit" style={{padding: '10px 20px'}}>
                         Absenden
                     </button>
                 </form>
