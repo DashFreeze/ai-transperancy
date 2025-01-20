@@ -11,10 +11,11 @@ export default function Home() {
     const [beruf, setBeruf] = useState('');
     const router = useRouter();
 
+    // Erstmal zu Question_ohnequellen, brauche noch random gruppeneinteilung
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         if (vorname) {
-            router.push('/question'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
+            router.push('/question_ohnequellen/question_1'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
         } else {
             alert('Bitte füllen Sie die benötigten Daten aus.');
         }

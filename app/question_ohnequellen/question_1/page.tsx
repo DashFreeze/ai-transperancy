@@ -9,7 +9,7 @@ export default function Question() {
     return (
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
             {/* Überschrift */}
-            <h1 style={{ fontSize: '24px', marginBottom: '20px' }}>Sie sehen folgenden Chatausschnitt von ChatGPT:</h1>
+            <h1 style={{ fontSize: '24px', marginBottom: '20px' }}>Sie sehen folgenden Chatausschnitt von ChatGPT zu Frage 1:</h1>
             <div className="chat-container" style={{
                 maxWidth: '800px',
                 margin: '0 auto',
