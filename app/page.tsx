@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { uploadUser } from './lib/data';
 
 export default function Home() {
     const [vorname, setVorname] = useState('');
@@ -14,6 +15,8 @@ export default function Home() {
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         if (vorname) {
+            alert(`Hallo, ${vorname}! Du bist ${age} Jahre alt.`);
+            uploadUser({ vorname, nachname, age: parseInt(age), geschlecht, abschluss, beruf });
             router.push('/question'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
         } else {
             alert('Bitte füllen Sie die benötigten Daten aus.');
