@@ -13,9 +13,8 @@ export default function Home() {
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        if (age&&nachname) {
-            alert(`Hallo, ${vorname}! Du bist ${age} Jahre alt.`);
-            router.push('/nextpage'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
+        if (vorname) {
+            router.push('/question'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
         } else {
             alert('Bitte füllen Sie die benötigten Daten aus.');
         }
