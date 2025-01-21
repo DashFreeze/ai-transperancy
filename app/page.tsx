@@ -72,7 +72,7 @@ export default function Home() {
                         style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
                     />
                     <button type="submit" style={{padding: '10px 20px'}}>
-                        Absenden
+                        Nächste Seite
                     </button>
                 </form>
             </div>

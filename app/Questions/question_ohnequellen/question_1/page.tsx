@@ -1,6 +1,6 @@
 'use client'
 
-export default function Question() {
+export default function Question_1() {
     const messages = [
         { sender: 'user', text: 'Nutzereingabe' },
         { sender: 'chatgpt', text: 'Chatgpt ausgabe' },
