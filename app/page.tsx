@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { uploadUser } from './lib/data';
 
 export default function Home() {
     const [vorname, setVorname] = useState('');
@@ -16,7 +15,7 @@ export default function Home() {
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         if (vorname) {
-            router.push('/question_ohnequellen/question_1'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
+            router.push('Questions/question_ohnequellen/question_1'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
         } else {
             alert('Bitte füllen Sie die benötigten Daten aus.');
         }

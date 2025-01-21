@@ -7,9 +7,10 @@ export default function Question() {
     ];
 
     return (
-        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <div style={{textAlign: 'center', marginTop: '20px'}}>
             {/* Überschrift */}
-            <h1 style={{ fontSize: '24px', marginBottom: '20px' }}>Sie sehen folgenden Chatausschnitt von ChatGPT zu Frage 1:</h1>
+            <h1 style={{fontSize: '24px', marginBottom: '20px'}}>Sie sehen folgenden Chatausschnitt von ChatGPT zu Frage
+                1:</h1>
             <div className="chat-container" style={{
                 maxWidth: '800px',
                 margin: '0 auto',
@@ -17,9 +18,9 @@ export default function Question() {
                 border: '1px solid #ccc',
                 borderRadius: '8px'
             }}>
-                <div className="chat-box" style={{ maxHeight: '300px', overflowY: 'auto', marginBottom: '20px' }}>
+                <div className="chat-box" style={{maxHeight: '300px', overflowY: 'auto', marginBottom: '20px'}}>
                     {messages.map((message, index) => (
-                        <div key={index} style={{ marginBottom: '10px' }}>
+                        <div key={index} style={{marginBottom: '10px'}}>
                             <div
                                 style={{
                                     textAlign: message.sender === 'user' ? 'right' : 'left',
@@ -41,6 +42,9 @@ export default function Question() {
                     ))}
                 </div>
             </div>
+            <button type="submit" style={{padding: '10px 20px'}}>
+                Absenden
+            </button>
         </div>
     );
 }
