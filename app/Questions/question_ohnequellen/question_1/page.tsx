@@ -1,10 +1,17 @@
 'use client'
 
+import { useRouter } from 'next/navigation';
+
 export default function QuestionOhneQuellen_1() {
+    const router = useRouter();
     const messages = [
         { sender: 'user', text: 'Nutzereingabe' },
         { sender: 'chatgpt', text: 'Chatgpt ausgabe' },
     ];
+
+    const handleNextPage = () => {
+        router.push('/Answers/answers_ohnequellen/answer1');
+    };
 
     return (
         <div style={{
@@ -56,15 +63,18 @@ export default function QuestionOhneQuellen_1() {
                     ))}
                 </div>
             </div>
-            <button type="submit" style={{
-                margin: '20px',
-                padding: '10px 20px',
-                backgroundColor: '#4CAF50', // Grüner Button
-                color: '#fff',              // Weißer Text
-                border: 'none',
-                borderRadius: '8px',
-                cursor: 'pointer',
-            }}>
+            <button
+                onClick={handleNextPage}
+                type="submit"
+                style={{
+                    margin: '20px',
+                    padding: '10px 20px',
+                    backgroundColor: '#4CAF50', // Grüner Button
+                    color: '#fff',              // Weißer Text
+                    border: 'none',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                }}>
                 Nächste Seite
             </button>
         </div>

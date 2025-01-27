@@ -1,6 +1,8 @@
 'use client'
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { uploadUser } from './lib/data';
+
 
 export default function Home() {
     const [vorname, setVorname] = useState('');
@@ -72,7 +74,7 @@ export default function Home() {
                         style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
                     />
                     <button type="submit" style={{padding: '10px 20px'}}>
-                        Nächste Seite
+                        Absenden
                     </button>
                 </form>
             </div>
