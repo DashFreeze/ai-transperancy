@@ -1,6 +1,8 @@
 'use client'
 import {useEffect, useState} from 'react';
 import { useRouter } from 'next/navigation';
+import { uploadUser } from './lib/data';
+
 
 export default function Home() {
     useEffect(() => {
@@ -100,6 +102,7 @@ export default function Home() {
                         onChange={(e) => setBeruf(e.target.value)}
                         style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
                     />
+
                     <button type="submit" style={{
                         margin: '20px',
                         padding: '10px 20px',
@@ -110,6 +113,7 @@ export default function Home() {
                         cursor: 'pointer',
                     }}>
                         Nächste Seite
+
                     </button>
                 </form>
             </div>
