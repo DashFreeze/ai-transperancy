@@ -51,7 +51,7 @@ export default function Home() {
             overflow: 'hidden',      // Kein Scrollen innerhalb des Containers
             textAlign: 'center',
             marginTop: '0',          // Kein zusätzliches Margin
-            backgroundColor: '#000', // Schwarzer Hintergrund
+            backgroundColor: '#708090', // Grauer Hintergrund
             color: '#000',           // Weißer Text
             padding: '20px'}}>
             <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '20px'}}>Bitte tragen Sie die benötigten Daten ein:</h1>
