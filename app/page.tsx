@@ -1,10 +1,28 @@
 'use client'
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { useRouter } from 'next/navigation';
 import { uploadUser } from './lib/data';
 
 
 export default function Home() {
+    useEffect(() => {
+        // Scrollen vollständig deaktivieren
+        document.documentElement.style.overflow = 'hidden'; // Für das <html>-Element
+        document.documentElement.style.height = '100%';
+        document.body.style.overflow = 'hidden'; // Für das <body>-Element
+        document.body.style.height = '100%';
+        document.body.style.margin = '0';
+
+        return () => {
+            // Zurücksetzen der Änderungen
+            document.documentElement.style.overflow = '';
+            document.documentElement.style.height = '';
+            document.body.style.overflow = '';
+            document.body.style.height = '';
+            document.body.style.margin = '';
+        };
+    }, []);
+
     const [vorname, setVorname] = useState('');
     const [nachname, setNachname] = useState('');
     const [age, setAge] = useState('');
@@ -24,8 +42,19 @@ export default function Home() {
     };
 
     return (
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <h1 style={{ marginBottom: '20px'}}>Bitte tragen Sie die benötigten Daten ein:</h1>
+        <div style={{
+            position: 'fixed',       // Verhindert Scrollen
+            top: 0,                  // Fixiert den Inhalt oben
+            left: 0,                 // Fixiert den Inhalt links
+            width: '100vw',          // Volle Breite des Viewports
+            height: '100vh',         // Volle Höhe des Viewports
+            overflow: 'hidden',      // Kein Scrollen innerhalb des Containers
+            textAlign: 'center',
+            marginTop: '0',          // Kein zusätzliches Margin
+            backgroundColor: '#000', // Schwarzer Hintergrund
+            color: '#000',           // Weißer Text
+            padding: '20px'}}>
+            <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '20px'}}>Bitte tragen Sie die benötigten Daten ein:</h1>
             <div className='form flex-direction-column'>
                 <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <input
@@ -52,7 +81,7 @@ export default function Home() {
                     <select
                         value={geschlecht}
                         onChange={(e) => setGeschlecht(e.target.value)}
-                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px', width: '215px', borderRadius: '4px'}}
                     >
                         <option value="" disabled>Wähle dein Geschlecht</option>
                         <option value="männlich">Männlich</option>
@@ -73,8 +102,18 @@ export default function Home() {
                         onChange={(e) => setBeruf(e.target.value)}
                         style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
                     />
-                    <button type="submit" style={{padding: '10px 20px'}}>
-                        Absenden
+
+                    <button type="submit" style={{
+                        margin: '20px',
+                        padding: '10px 20px',
+                        backgroundColor: '#4CAF50', // Grüner Button
+                        color: '#fff',              // Weißer Text
+                        border: 'none',
+                        borderRadius: '8px',
+                        cursor: 'pointer',
+                    }}>
+                        Nächste Seite
+
                     </button>
                 </form>
             </div>
