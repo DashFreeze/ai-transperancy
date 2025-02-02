@@ -8,7 +8,19 @@ export default function DD() {
 
     const handleSubmit = (e: { preventDefault: () => void }) => {
         e.preventDefault();
-        router.push('Questions/question_ohnequellen/question_1');// Ersetze dies mit dem tatsächlichen Pfad der nächsten Seite
+
+        // Zufällige Gruppenzuweisung
+        const group = Math.floor(Math.random() * 3); // Gibt eine Zahl zwischen 0 und 2 zurück
+
+        // Definiere die Pfade für die drei Gruppen
+        const paths = [
+            'Questions/question_ohnequellen/question_1', // Gruppe 1
+            'Questions/question_mitquellen/question_1',  // Gruppe 2
+            'Questions/question_mitfakequellen/question_1' // Gruppe 3
+        ];
+
+        // Weiterleitung zum zufälligen Pfad
+        router.push(paths[group]);
     };
 
     // Funktion zum Toggle des Kontrollkästchens
@@ -218,6 +230,7 @@ export default function DD() {
             >
                 {/* Versuchsdurchführende */}
                 <div style={{marginRight: '20px'}}>
+
                     <h3 style={{
                         color: '#ffffff',
                         marginBottom: '10px',
@@ -225,24 +238,33 @@ export default function DD() {
                     }}>Versuchsdurchführende:</h3>
 
                     <div style={{marginBottom: '20px'}}>
+
                         <h4 style={{color: '#ffffff', textDecoration: 'underline'}}>Philipp Schwarzer</h4>
+
                         <ul style={{listStyleType: 'none', padding: 0, textAlign: 'left'}}>
+
                             <li>E-Mail: Philipp.Schwarzer@stud.uni-regensburg.de</li>
                             <li>Universität Regensburg</li>
                         </ul>
                     </div>
 
                     <div style={{marginBottom: '20px'}}>
+
                         <h4 style={{color: '#ffffff', textDecoration: 'underline'}}>Michael Winter</h4>
+
                         <ul style={{listStyleType: 'none', padding: 0, textAlign: 'left'}}>
+
                             <li>E-Mail: Michael1.Winter@stud.uni-regensburg.de</li>
                             <li>Universität Regensburg</li>
                         </ul>
                     </div>
 
                     <div>
+
                         <h4 style={{color: '#ffffff', textDecoration: 'underline'}}>Maximilian Schnabel</h4>
+
                         <ul style={{listStyleType: 'none', padding: 0, textAlign: 'left'}}>
+
                             <li>E-Mail: Maximilian.Schnabel@stud.uni-regensburg.de</li>
                             <li>Universität Regensburg</li>
                         </ul>
@@ -256,6 +278,7 @@ export default function DD() {
                         marginBottom: '10px',
                         textDecoration: 'underline'
                     }}>Versuchsleitung:</h3>
+
                     <ul style={{listStyleType: 'none', padding: 0, textAlign: 'left'}}>
                         <li>PD Dr. David Elsweiler</li>
                         <li>Telefonnummer: 0941 943-4195</li>
