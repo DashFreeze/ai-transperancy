@@ -70,6 +70,7 @@ export default function Answer() {
                     fontSize: '16px',
                     border: '1px solid #ccc',
                     borderRadius: '8px',
+                    color: 'black'
                 }}
             />
             <br />
