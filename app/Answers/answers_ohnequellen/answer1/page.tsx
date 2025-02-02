@@ -85,7 +85,7 @@ export default function Answer() {
                     borderRadius: '8px',
                     cursor: 'pointer',
                 }}>
-                Antwort absenden
+                Nächste Seite
             </button>
         </div>
     </div>
