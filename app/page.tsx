@@ -33,7 +33,7 @@ export default function DD() {
     return (
         <div style={{
             textAlign: 'center',
-            backgroundColor: '#000', // Schwarzer Hintergrund
+            backgroundColor: '#708099', // Schwarzer Hintergrund
             color: '#000',           // Weißer Text
             padding: '20px'
         }}>
