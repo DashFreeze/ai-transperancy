@@ -62,7 +62,7 @@ export default function DD() {
                 Sie sind eingeladen, an der Onlinestudie &#34;Name noch unbekannt:&#34; teilzunehmen. Die Studie wird
                 von Philipp Schwarzer, Michael Winter und Maximilian Schnabel durchgeführt und von PD Dr. David
                 Elsweiler an der Universität Regensburg geleitet.
-                Die Studie mit voraussichtlich 66 Teilnehmer findet im Zeitraum vom 15.02.2025 bis 30.03.2025
+                Die Studie mit voraussichtlich 40 Teilnehmer findet im Zeitraum vom 15.02.2025 bis 30.03.2025
                 statt.
             </p>
 
