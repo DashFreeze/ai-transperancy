@@ -1,5 +1,6 @@
 'use client';
 
+import { saveAnswer } from '@/app/lib/data';
 import { useState } from 'react';
 
 export default function Answer() {
@@ -11,9 +12,14 @@ export default function Answer() {
             alert('Bitte bewerten Sie die Glaubwürdigkeit.');
             return;
         }
-        console.log('User Antwort:', userAnswer);
-        console.log('Glaubwürdigkeit:', credibilityRating);
-        alert('Vielen Dank für Ihre Antwort!');
+        const userIdStr = localStorage.getItem("userId");
+        const question = localStorage.getItem("question");
+        if (!userIdStr || !question) {
+            alert('User ID oder Frage nicht gefunden.');
+            return;
+        }
+        saveAnswer(parseInt(userIdStr), question, userAnswer, credibilityRating);
+        localStorage.removeItem("question");
     };
 
     return (
@@ -76,6 +82,7 @@ export default function Answer() {
             <br />
             <button
                 type="submit"
+                onClick={handleSubmit}
                 style={{
                     margin: '20px',
                     padding: '10px 20px',

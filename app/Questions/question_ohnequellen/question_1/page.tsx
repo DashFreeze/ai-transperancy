@@ -32,6 +32,7 @@ export default function QuestionOhneQuellen_1() {
     ];
 
     const handleNextPage = () => {
+        localStorage.setItem("question", "1");
         router.push('/Answers/answers_ohnequellen/answer1');
     };
 
