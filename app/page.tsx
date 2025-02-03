@@ -110,7 +110,7 @@ export default function DD() {
             </h2>
 
             <p style={{ marginBottom: '20px' }}>
-                Ziel dieser Forschung ist es, zu untersuchen, wie die Wahrnehmung der Glaubwürdigkeit der KI generierten Antworten in Abhängigkeit von Quellenangaben bei der Nutzung von KI-Systemen beeinflusst wird.
+                Ziel dieser Forschung ist es, zu untersuchen, wie die Wahrnehmung der Glaubwürdigkeit KI generierter Antworten, bei der Nutzung von KI-Systemen beeinflusst wird.
                 Ihre Teilnahme hilft uns, dieses Forschungsziel zu erreichen. Die Ergebnisse dieser Forschung können auf wissenschaftlichen oder
                 Fachtagungen präsentiert oder veröffentlicht werden.
             </p>
