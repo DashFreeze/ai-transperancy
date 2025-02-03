@@ -40,7 +40,7 @@ export default function DD() {
     return (
         <div
             style={{
-                backgroundColor: '#708099', // Grauer Hintergrund
+                backgroundColor: '#708090', // Grauer Hintergrund
                 color: '#ffffff', // Textfarbe weiß
                 padding: '30px',
                 fontFamily: 'Arial, sans-serif',
