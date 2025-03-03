@@ -52,11 +52,11 @@ export default function QuestionOhneQuellen_1() {
             boxSizing: 'border-box'
         }}>
             {/* Überschrift */}
-            <h1 style={{ fontSize: '24px', marginBottom: '20px', padding: '5px' }}>
+            <h1 style={{ fontSize: '20px', marginBottom: '20px', padding: '5px' }}>
                 Ihr Opa leidet an atopischer Dermatitis und hat Schwierigkeiten, die Symptome mit herkömmlichen Behandlungen zu kontrollieren. Sie haben gehört, dass Dupixent eine Alternative sei, um die Krankheit zu behandeln. Um sicher zu gehen, stellen Sie stellen ChatGPT folgende Frage:
             </h1>
             <div className="chat-container" style={{
-                maxWidth: '900px',
+                maxWidth: '1100px',
                 margin: '0 auto',
                 padding: '20px',
                 border: '1px solid #ccc',

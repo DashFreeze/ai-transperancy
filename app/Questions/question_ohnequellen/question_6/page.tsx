@@ -54,11 +54,11 @@ export default function QuestionOhneQuellen_1() {
             boxSizing: 'border-box'
         }}>
             {/* Überschrift */}
-            <h1 style={{ fontSize: '24px', marginBottom: '20px', padding: '5px' }}>
+            <h1 style={{ fontSize: '20px', marginBottom: '20px', padding: '10px' }}>
                 Ihr Kind hat hohes Fieber und fühlt sich sehr unwohl. Sie haben gehört, ein lauwarmes Bad sei eine gute Methode, um das Fieber zu senken und den Zustand zu lindern. Um sicher zu gehen, stellen Sie ChatGPT folgende Frage:
             </h1>
             <div className="chat-container" style={{
-                maxWidth: '900px',
+                maxWidth: '1100px',
                 margin: '0 auto',
                 padding: '20px',
                 border: '1px solid #ccc',

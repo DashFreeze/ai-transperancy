@@ -54,11 +54,11 @@ export default function QuestionOhneQuellen_1() {
             boxSizing: 'border-box'
         }}>
             {/* Überschrift */}
-            <h1 style={{ fontSize: '24px', marginBottom: '20px', padding: '5px' }}>
+            <h1 style={{ fontSize: '20px', marginBottom: '20px', padding: '5px' }}>
                 Ihre Schwester hat in letzter Zeit vermehrt mit Stress und Angstzuständen zu kämpfen und sucht nach natürlichen Möglichkeiten, um sich zu entspannen. Von anderen wurde berichtet, dass L-Theanin eine geeignete Alternative für sie sein könnte. Sie möchten über die möglichen Vorteile von L-Theanin erfahren und stellen ChatGPt folgende Frage:
             </h1>
             <div className="chat-container" style={{
-                maxWidth: '900px',
+                maxWidth: '1100px',
                 margin: '0 auto',
                 padding: '20px',
                 border: '1px solid #ccc',

@@ -54,11 +54,11 @@ export default function QuestionOhneQuellen_1() {
             boxSizing: 'border-box'
         }}>
             {/* Überschrift */}
-            <h1 style={{ fontSize: '24px', marginBottom: '20px', padding: '5px' }}>
+            <h1 style={{ fontSize: '20px', marginBottom: '20px', padding: '5px' }}>
                 Ihr Onkel hat eine familiäre Vorgeschichte von Krebs und fragt sich, ob die Einnahme von Selenpräparaten ihm helfen könnte, das Risiko zu verringern. Sie möchten wissen, ob dies eine sinnvolle Maßnahme für ihn sein könnte und stellen ChatGPT folgende Frage:
             </h1>
             <div className="chat-container" style={{
-                maxWidth: '900px',
+                maxWidth: '1100px',
                 margin: '0 auto',
                 padding: '20px',
                 border: '1px solid #ccc',
