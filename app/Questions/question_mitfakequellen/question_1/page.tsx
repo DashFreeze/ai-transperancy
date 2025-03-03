@@ -1,17 +1,20 @@
 'use client';
 import { useEffect } from 'react';
 
+import { useRouter } from 'next/navigation';
+
 export default function QuestionOhneQuellen_1() {
+
     useEffect(() => {
-        // Scrollen vollständig deaktivieren
-        document.documentElement.style.overflow = 'hidden'; // Für das <html>-Element
-        document.documentElement.style.height = '100%';
-        document.body.style.overflow = 'hidden'; // Für das <body>-Element
-        document.body.style.height = '100%';
-        document.body.style.margin = '0';
+        setTimeout(() => {
+            document.documentElement.style.overflow = 'hidden';
+            document.documentElement.style.height = '100%';
+            document.body.style.overflow = 'hidden';
+            document.body.style.height = '100%';
+            document.body.style.margin = '0';
+        }, 0);
 
         return () => {
-            // Zurücksetzen der Änderungen
             document.documentElement.style.overflow = '';
             document.documentElement.style.height = '';
             document.body.style.overflow = '';
@@ -20,14 +23,24 @@ export default function QuestionOhneQuellen_1() {
         };
     }, []);
 
+
+    const router = useRouter();
+
+
     const messages = [
-        { sender: 'user', text: 'Nutzereingabe', sources: [] },
+        { sender: 'user', text: 'Kann Dupixent Ekzeme behandeln?', sources: [] },
         {
             sender: 'chatgpt',
-            text: 'ChatGPT Ausgabe',
+            text: 'Ja, Dupixent (Wirkstoff: Dupilumab) ist zur Behandlung von mittelschwerer bis schwerer atopischer Dermatitis (auch bekannt als atopisches Ekzem oder Neurodermitis) zugelassen. Es kann bei Erwachsenen und Jugendlichen ab 12 Jahren eingesetzt werden, deren Erkrankung mit topischen Therapien nicht ausreichend kontrolliert werden kann oder die diese nicht anwenden können. Zudem ist Dupixent für Kinder von 6 Monaten bis 11 Jahren mit schwerer atopischer Dermatitis zugelassen. Es kann allein oder in Kombination mit anderen auf die Haut aufgetragenen Arzneimitteln verwendet werden. Dupixent wirkt, indem es die Wirkung der Botenstoffe Interleukin-4 (IL-4) und Interleukin-13 (IL-13) hemmt, die eine wesentliche Rolle bei der Entzündungsreaktion der atopischen Dermatitis spielen. Durch die Blockierung dieser Botenstoffe kann Dupixent den Hautzustand verbessern und den Juckreiz lindern. Bitte beachten Sie, dass die Anwendung von Dupixent mit Nebenwirkungen verbunden sein kann. Häufige Nebenwirkungen sind Reaktionen an der Injektionsstelle, Bindehautentzündung (Konjunktivitis) und Gelenkschmerzen. Es ist wichtig, die Behandlung mit Ihrem Arzt zu besprechen, um die Risiken und Vorteile abzuwägen.',
             sources: ['Quelle 1: https://example.com', 'Quelle 2: https://another-example.com'],
         },
     ];
+
+
+    const handleNextPage = () => {
+        localStorage.setItem("question", "1");
+        router.push('');
+    };
 
     return (
         <div style={{
@@ -38,25 +51,28 @@ export default function QuestionOhneQuellen_1() {
             height: '100vh',         // Volle Höhe des Viewports
             overflow: 'hidden',      // Kein Scrollen innerhalb des Containers
             textAlign: 'center',
-            color: '#fff',
-            backgroundColor: '#000',
-            padding: '20px',
+            marginTop: '0',          // Kein zusätzliches Margin
+            backgroundColor: '#708099', // Grauer Hintergrund
+            color: '#fff',           // Weißer Text
+            padding: '15px',
+            boxSizing: 'border-box'
         }}>
             {/* Überschrift */}
-            <h1 style={{ fontSize: '24px', marginBottom: '20px' }}>
-                Sie sehen folgenden Chatausschnitt von ChatGPT zu Frage 1:
+            <h1 style={{ fontSize: '20px', marginBottom: '20px', padding: '10px' }}>
+                Ihr Opa leidet an atopischer Dermatitis und hat Schwierigkeiten, die Symptome mit herkömmlichen Behandlungen zu kontrollieren. Sie haben gehört, dass Dupixent eine Alternative sei, um die Krankheit zu behandeln. Um sicher zu gehen, stellen Sie stellen ChatGPT folgende Frage:
             </h1>
             <div className="chat-container" style={{
-                maxWidth: '800px',
+                maxWidth: '1100px',
                 margin: '0 auto',
                 padding: '20px',
                 border: '1px solid #ccc',
                 borderRadius: '8px',
-                backgroundColor: '#333',
+                fontSize: 16,
+                backgroundColor: '#333', // Dunkler Hintergrund für den Chat-Container
             }}>
                 <div className="chat-box" style={{
-                    maxHeight: '300px',
-                    overflowY: 'auto',
+                    maxHeight: '500px',
+                    overflowY: 'hidden',
                     marginBottom: '20px',
                 }}>
                     {messages.map((message, index) => (
@@ -70,7 +86,7 @@ export default function QuestionOhneQuellen_1() {
                                 <span
                                     style={{
                                         backgroundColor: message.sender === 'user' ? '#1f7a5e' : '#555',
-                                        color: '#fff',
+                                        color: '#fff', // Weißer Text auf dunklem Hintergrund
                                         padding: '8px',
                                         borderRadius: '12px',
                                         display: 'inline-block',
@@ -99,15 +115,18 @@ export default function QuestionOhneQuellen_1() {
                     ))}
                 </div>
             </div>
-            <button type="submit" style={{
-                margin: '20px',
-                padding: '10px 20px',
-                backgroundColor: '#4CAF50',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '8px',
-                cursor: 'pointer',
-            }}>
+            <button
+                onClick={handleNextPage}
+                type="submit"
+                style={{
+                    margin: '20px',
+                    padding: '10px 20px',
+                    backgroundColor: '#4CAF50', // Grüner Button
+                    color: '#fff',              // Weißer Text
+                    border: 'none',
+                    borderRadius: '8px',
+                    cursor: 'pointer',
+                }}>
                 Nächste Seite
             </button>
         </div>
