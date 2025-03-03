@@ -39,3 +39,25 @@ export async function saveAnswer(userId: number, question: string, answer: strin
   }
 }
 
+export async function saveDemographics(userId: number, vorname: string, nachname: string, age: string, geschlecht: string, abschluss: string, beruf: string) {
+  try {
+    const result = await sql`
+      UPDATE users
+      SET vorname = ${vorname}, 
+          nachname = ${nachname}, 
+          age = ${age}, 
+          geschlecht = ${geschlecht}, 
+          abschluss = ${abschluss}, 
+          beruf = ${beruf}
+      WHERE id = ${userId}
+      RETURNING *;
+    `;
+
+    return result.rows[0]; // Returns the updated user
+  } catch (error) {
+    console.error("Error saving demographics:", error);
+    throw error;
+  }
+}
+
+

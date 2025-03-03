@@ -15,17 +15,25 @@ export default function DD() {
             const userId = result.id;
             const userGroup = result.gruppe;
 
-            // Definiere die Pfade für die drei Gruppen
-            const paths = [
-                'Questions/question_ohnequellen/question_1',
-                'Questions/question_mitquellen/question_1',
-                'Questions/question_mitfakequellen/question_1'
-            ];
-
             localStorage.setItem("userId", userId);
+            localStorage.setItem("userGroup", userGroup);
 
-            // Weiterleitung mit der erhaltenen Gruppe
-            router.push(paths[userGroup]);
+            const list = ["question_1", "question_2", "question_3", "question_4", "question_5", "question_6"];
+            const randomIndex = Math.floor(Math.random() * list.length);
+            const randomItem = list[randomIndex];
+
+            list.splice(randomIndex, 1);
+
+            if (userGroup === 0) {
+                localStorage.setItem("list", JSON.stringify(list));
+                router.push('/Questions/question_ohnequellen/' + randomItem);
+            } else if (userGroup === 1) {
+                localStorage.setItem("list", JSON.stringify(list));
+                router.push('/Questions/question_mitquellen/' + randomItem);
+            } else if (userGroup === 2) {
+                localStorage.setItem("list", JSON.stringify(list));
+                router.push('/Questions/question_mitfakequellen/' + randomItem);
+            }
 
         } catch (error) {
             console.error("Error:", error);

@@ -38,8 +38,8 @@ export default function QuestionOhneQuellen_1() {
 
 
     const handleNextPage = () => {
-        localStorage.setItem("question", "1");
-        router.push('');
+        localStorage.setItem("question", "Kann Dupixent Ekzeme behandeln?");
+        router.push('/Answers');
     };
 
     return (
@@ -59,7 +59,7 @@ export default function QuestionOhneQuellen_1() {
         }}>
             {/* Überschrift */}
             <h1 style={{ fontSize: '20px', marginBottom: '20px', padding: '10px' }}>
-                Ihr Opa leidet an atopischer Dermatitis und hat Schwierigkeiten, die Symptome mit herkömmlichen Behandlungen zu kontrollieren. Sie haben gehört, dass Dupixent eine Alternative sei, um die Krankheit zu behandeln. Um sicher zu gehen, stellen Sie stellen ChatGPT folgende Frage:
+                Ihr Opa leidet an atopischer Dermatitis und hat Schwierigkeiten, die Symptome mit herkömmlichen Behandlungen zu kontrollieren. Sie haben gehört, dass Dupixent eine Alternative sei, um die Krankheit zu behandeln. Um sicher zu gehen, stellen Sie ChatGPT folgende Frage:
             </h1>
             <div className="chat-container" style={{
                 maxWidth: '1100px',

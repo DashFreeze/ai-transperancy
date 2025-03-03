@@ -38,8 +38,8 @@ export default function QuestionOhneQuellen_1() {
 
 
     const handleNextPage = () => {
-        localStorage.setItem("question", "1");
-        router.push('');
+        localStorage.setItem("question", "Hilft fermentierte Milch bei Bluthochdruck");
+        router.push('/Answers');
     };
 
     return (

@@ -38,8 +38,8 @@ export default function QuestionOhneQuellen_1() {
 
 
     const handleNextPage = () => {
-        localStorage.setItem("question", "1");
-        router.push('');
+        localStorage.setItem("question", "Hilft Tylenol bei der Bewältigung von Arthrose-Symptomen?");
+        router.push('/Answers');
     };
 
     return (

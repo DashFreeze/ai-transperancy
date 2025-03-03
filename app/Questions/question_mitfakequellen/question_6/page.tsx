@@ -38,8 +38,8 @@ export default function QuestionOhneQuellen_1() {
 
 
     const handleNextPage = () => {
-        localStorage.setItem("question", "1");
-        router.push('');
+        localStorage.setItem("question", "Ist ein lauwarmes Bad ein guter Weg um Fieber bei Kindern zu reduzieren?");
+        router.push('/Answers');
     };
 
     return (

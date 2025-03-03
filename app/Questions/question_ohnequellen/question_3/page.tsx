@@ -34,8 +34,8 @@ export default function QuestionOhneQuellen_1() {
     ];
 
     const handleNextPage = () => {
-        localStorage.setItem("question", "1");
-        router.push('/Answers/answers_ohnequellen/answer1');
+        localStorage.setItem("question", "Können L-Theanin-Ergänzungsmittel Stress und Angst reduzieren?");
+        router.push('/Answers');
     };
 
     return (

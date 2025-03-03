@@ -1,6 +1,7 @@
 'use client'
 import {useEffect, useState} from 'react';
 import { useRouter } from 'next/navigation';
+import { saveDemographics } from '../lib/data';
 
 
 export default function Home() {
@@ -28,13 +29,15 @@ export default function Home() {
     const [geschlecht, setGeschlecht] = useState('');
     const [abschluss, setAbschluss] = useState('');
     const [beruf, setBeruf] = useState('');
-    const router = useRouter();
 
     // Erstmal zu Question_ohnequellen, brauche noch random gruppeneinteilung
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         if (vorname) {
-            router.push('Questions/question_ohnequellen/question_1'); // Ersetzen Sie '/nextpage' durch den tatsächlichen Pfad der nächsten Seite
+            localStorage.getItem('userId');
+            saveDemographics(parseInt(localStorage.getItem('userId') || '0'), vorname, nachname, age, geschlecht, abschluss, beruf);
+            localStorage.clear();
+            alert('Vielen Dank für Ihre Teilnahme!');
         } else {
             alert('Bitte füllen Sie die benötigten Daten aus.');
         }
@@ -111,7 +114,7 @@ export default function Home() {
                         borderRadius: '8px',
                         cursor: 'pointer',
                     }}>
-                        Nächste Seite
+                        Abschicken
 
                     </button>
                 </form>
