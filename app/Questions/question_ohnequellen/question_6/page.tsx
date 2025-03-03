@@ -27,10 +27,10 @@ export default function QuestionOhneQuellen_1() {
     const router = useRouter();
 
     const messages = [
-        { sender: 'user', text: 'Hilft Tylenol bei der Bewältigung von Arthrose-Symptomen?' },
-        { sender: 'chatgpt', text: 'Osteoarthritis (OA) ist eine degenerative chronische Erkrankung, die Gelenkschmerzen verursacht und meist durch die Reduzierung von Gelenkentzündungen und die Linderung von Beschwerden behandelt wird. Paracetamol, auch bekannt als Acetaminophen oder Tylenol, ist ein frei erhältliches Medikament zur allgemeinen Fieber- und Schmerzlinderung. Ein sehr nützliches Dokument würde die Wirksamkeit von Paracetamol bei der Behandlung von Osteoarthritis untersuchen. Ein hilfreiches Dokument würde dem Benutzer helfen, eine Entscheidung über die Behandlung von Osteoarthritis mit Tylenol zu treffen, indem es Informationen über empfohlene Behandlungen zur Symptomlinderung, Tylenol oder beides bereitstellt.\n' +
+        { sender: 'user', text: 'Ist ein lauwarmes Bad ein guter Weg um Fieber bei Kindern zu reduzieren?'},
+        { sender: 'chatgpt', text: 'Fieber kann das Immunsystem stärken und ist daher eine Abwehrreaktion gegen Infektionen. Ein sehr nützliches Dokument würde die Wirksamkeit eines Schwammbads zur Fiebersenkung bei Kindern untersuchen. Ein hilfreiches Dokument würde einem Nutzer helfen, eine Entscheidung über die Anwendung eines Schwammbads zur Fiebersenkung bei Kindern zu treffen, indem es Informationen über empfohlene Behandlungen für Fieber bei Kindern, die Auswirkungen von Schwammbädern auf Kinder mit Fieber oder beides bereitstellt.\n' +
                 '\n' +
-                'Haftungsausschluss: Wir geben keine medizinische Beratung und medizinische Entscheidungen sollten niemals auf der von uns gewählten Position basieren. Konsultieren Sie einen Arzt für professionelle Beratung.' },
+                'Haftungsausschluss: Wir geben keine medizinische Beratung, und medizinische Entscheidungen sollten niemals auf der von uns gewählten Position basieren. Konsultieren Sie einen Arzt für professionelle Beratung.' },
     ];
 
     const handleNextPage = () => {
@@ -55,7 +55,7 @@ export default function QuestionOhneQuellen_1() {
         }}>
             {/* Überschrift */}
             <h1 style={{ fontSize: '24px', marginBottom: '20px', padding: '5px' }}>
-                Ihre Mutter hat seit Jahren mit den schmerzhaften Symptomen der Arthrose zu kämpfen und sucht nach einer Möglichkeit, die Beschwerden zu lindern. Sie haben erfahren, dass Tylenol (Paracetamol) eine geeignete Option sein könnte und wollen durch Hilfe von ChatGPT mehr Informationen bekommen:
+                Ihr Kind hat hohes Fieber und fühlt sich sehr unwohl. Sie haben gehört, ein lauwarmes Bad sei eine gute Methode, um das Fieber zu senken und den Zustand zu lindern. Um sicher zu gehen, stellen Sie ChatGPT folgende Frage:
             </h1>
             <div className="chat-container" style={{
                 maxWidth: '900px',

@@ -27,10 +27,10 @@ export default function QuestionOhneQuellen_1() {
     const router = useRouter();
 
     const messages = [
-        { sender: 'user', text: 'Hilft Tylenol bei der Bewältigung von Arthrose-Symptomen?' },
-        { sender: 'chatgpt', text: 'Osteoarthritis (OA) ist eine degenerative chronische Erkrankung, die Gelenkschmerzen verursacht und meist durch die Reduzierung von Gelenkentzündungen und die Linderung von Beschwerden behandelt wird. Paracetamol, auch bekannt als Acetaminophen oder Tylenol, ist ein frei erhältliches Medikament zur allgemeinen Fieber- und Schmerzlinderung. Ein sehr nützliches Dokument würde die Wirksamkeit von Paracetamol bei der Behandlung von Osteoarthritis untersuchen. Ein hilfreiches Dokument würde dem Benutzer helfen, eine Entscheidung über die Behandlung von Osteoarthritis mit Tylenol zu treffen, indem es Informationen über empfohlene Behandlungen zur Symptomlinderung, Tylenol oder beides bereitstellt.\n' +
+        { sender: 'user', text: 'Hilft Selenium Krebs zu vermeiden?'},
+        { sender: 'chatgpt', text: 'Selenpräparate werden als Mittel zur Krebsprävention angepriesen. Ein sehr nützliches Dokument würde die Wirksamkeit von Selen zur Krebsprävention untersuchen. Ein hilfreiches Dokument würde einem Nutzer helfen, eine Entscheidung über die Verwendung von Selen zur Krebsprävention zu treffen, indem es Informationen über empfohlene Methoden zur Krebsprävention, die medizinische Verwendung von Selen oder beides bereitstellt.\n' +
                 '\n' +
-                'Haftungsausschluss: Wir geben keine medizinische Beratung und medizinische Entscheidungen sollten niemals auf der von uns gewählten Position basieren. Konsultieren Sie einen Arzt für professionelle Beratung.' },
+                'Haftungsausschluss: Wir geben keine medizinische Beratung, und medizinische Entscheidungen sollten niemals auf der von uns gewählten Position basieren. Konsultieren Sie einen Arzt für professionelle Beratung.'},
     ];
 
     const handleNextPage = () => {
@@ -55,7 +55,7 @@ export default function QuestionOhneQuellen_1() {
         }}>
             {/* Überschrift */}
             <h1 style={{ fontSize: '24px', marginBottom: '20px', padding: '5px' }}>
-                Ihre Mutter hat seit Jahren mit den schmerzhaften Symptomen der Arthrose zu kämpfen und sucht nach einer Möglichkeit, die Beschwerden zu lindern. Sie haben erfahren, dass Tylenol (Paracetamol) eine geeignete Option sein könnte und wollen durch Hilfe von ChatGPT mehr Informationen bekommen:
+                Ihr Onkel hat eine familiäre Vorgeschichte von Krebs und fragt sich, ob die Einnahme von Selenpräparaten ihm helfen könnte, das Risiko zu verringern. Sie möchten wissen, ob dies eine sinnvolle Maßnahme für ihn sein könnte und stellen ChatGPT folgende Frage:
             </h1>
             <div className="chat-container" style={{
                 maxWidth: '900px',
