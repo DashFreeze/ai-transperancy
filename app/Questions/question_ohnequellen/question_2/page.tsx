@@ -28,9 +28,7 @@ export default function QuestionOhneQuellen_1() {
 
     const messages = [
         { sender: 'user', text: 'Hilft Tylenol bei der Bewältigung von Arthrose-Symptomen?' },
-        { sender: 'chatgpt', text: 'Osteoarthritis (OA) ist eine degenerative chronische Erkrankung, die Gelenkschmerzen verursacht und meist durch die Reduzierung von Gelenkentzündungen und die Linderung von Beschwerden behandelt wird. Paracetamol, auch bekannt als Acetaminophen oder Tylenol, ist ein frei erhältliches Medikament zur allgemeinen Fieber- und Schmerzlinderung. Ein sehr nützliches Dokument würde die Wirksamkeit von Paracetamol bei der Behandlung von Osteoarthritis untersuchen. Ein hilfreiches Dokument würde dem Benutzer helfen, eine Entscheidung über die Behandlung von Osteoarthritis mit Tylenol zu treffen, indem es Informationen über empfohlene Behandlungen zur Symptomlinderung, Tylenol oder beides bereitstellt.\n' +
-                '\n' +
-                'Haftungsausschluss: Wir geben keine medizinische Beratung und medizinische Entscheidungen sollten niemals auf der von uns gewählten Position basieren. Konsultieren Sie einen Arzt für professionelle Beratung.' },
+        { sender: 'chatgpt', text: 'Ja, Tylenol (Acetaminophen) kann zur Linderung von leichten bis mäßigen Schmerzen bei Arthrose beitragen, indem es die Schmerzsignale im Gehirn blockiert. Es wird häufig als Erstlinientherapie empfohlen, insbesondere für Menschen, die keine nichtsteroidalen Antirheumatika (NSAR) vertragen. Allerdings hat Tylenol keine entzündungshemmende Wirkung, sodass es weniger wirksam sein kann, wenn eine Entzündung an den Gelenken vorliegt. Die Wirkung kann individuell variieren, und bei stärkeren Beschwerden ist möglicherweise eine andere oder ergänzende Behandlung erforderlich.' },
     ];
 
     const handleNextPage = () => {

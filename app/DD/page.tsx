@@ -33,7 +33,7 @@ export default function Home() {
     // Erstmal zu Question_ohnequellen, brauche noch random gruppeneinteilung
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        if (vorname & nachname & age & geschlecht & abschluss & beruf) {
+        if (vorname && nachname && age && geschlecht && abschluss && beruf) {
             localStorage.getItem('userId');
             saveDemographics(parseInt(localStorage.getItem('userId') || '0'), vorname, nachname, age, geschlecht, abschluss, beruf);
             localStorage.clear();
