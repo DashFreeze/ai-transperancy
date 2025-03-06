@@ -28,7 +28,9 @@ export default function QuestionOhneQuellen_1() {
 
     const messages = [
         { sender: 'user', text: 'Können L-Theanin-Ergänzungsmittel Stress und Angst reduzieren?'},
-        { sender: 'chatgpt', text: 'Ja, L-Theanin-Ergänzungsmittel können Stress und Angst reduzieren. L-Theanin ist eine Aminosäure, die vor allem in grünem Tee vorkommt und beruhigende Wirkungen auf das Nervensystem hat, ohne sedierend zu wirken. Studien zeigen, dass L-Theanin die Alpha-Wellen im Gehirn fördert, was zu einem entspannten, aber wachen Zustand führt. Es kann auch die Wirkung von Neurotransmittern wie GABA, Dopamin und Serotonin modulieren, was die Stressreaktion verringert. Viele Menschen berichten von einer verbesserten Stressbewältigung, reduzierter Angst und gesteigerter Konzentration nach der Einnahme'}
+        { sender: 'chatgpt', 
+            text: 'Ja, L-Theanin-Ergänzungsmittel können Stress und Angst reduzieren. L-Theanin ist eine Aminosäure, die vor allem in grünem Tee vorkommt und beruhigende Wirkungen auf das Nervensystem hat, ohne sedierend zu wirken. Studien zeigen, dass L-Theanin die Alpha-Wellen im Gehirn fördert, was zu einem entspannten, aber wachen Zustand führt. Es kann auch die Wirkung von Neurotransmittern wie GABA, Dopamin und Serotonin modulieren, was die Stressreaktion verringert. Viele Menschen berichten von einer verbesserten Stressbewältigung, reduzierter Angst und gesteigerter Konzentration nach der Einnahme',
+        }
     ];
 
     const handleNextPage = () => {

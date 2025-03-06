@@ -28,7 +28,9 @@ export default function QuestionOhneQuellen_1() {
 
     const messages = [
         { sender: 'user', text: 'Hilft Tylenol bei der Bewältigung von Arthrose-Symptomen?' },
-        { sender: 'chatgpt', text: 'Ja, Tylenol (Acetaminophen) kann zur Linderung von leichten bis mäßigen Schmerzen bei Arthrose beitragen, indem es die Schmerzsignale im Gehirn blockiert. Es wird häufig als Erstlinientherapie empfohlen, insbesondere für Menschen, die keine nichtsteroidalen Antirheumatika (NSAR) vertragen. Allerdings hat Tylenol keine entzündungshemmende Wirkung, sodass es weniger wirksam sein kann, wenn eine Entzündung an den Gelenken vorliegt. Die Wirkung kann individuell variieren, und bei stärkeren Beschwerden ist möglicherweise eine andere oder ergänzende Behandlung erforderlich.' },
+        { sender: 'chatgpt', 
+            text: 'Ja, Tylenol (Acetaminophen) kann zur Linderung von leichten bis mäßigen Schmerzen bei Arthrose beitragen, indem es die Schmerzsignale im Gehirn blockiert. Es wird häufig als Erstlinientherapie empfohlen, insbesondere für Menschen, die keine nichtsteroidalen Antirheumatika (NSAR) vertragen. Allerdings hat Tylenol keine entzündungshemmende Wirkung, sodass es weniger wirksam sein kann, wenn eine Entzündung an den Gelenken vorliegt. Die Wirkung kann individuell variieren, und bei stärkeren Beschwerden ist möglicherweise eine andere oder ergänzende Behandlung erforderlich.',
+        }
     ];
 
     const handleNextPage = () => {

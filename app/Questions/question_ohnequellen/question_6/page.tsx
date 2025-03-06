@@ -28,7 +28,9 @@ export default function QuestionOhneQuellen_1() {
 
     const messages = [
         { sender: 'user', text: 'Ist ein lauwarmes Bad ein guter Weg um Fieber bei Kindern zu reduzieren?'},
-        { sender: 'chatgpt', text: 'Ja, ein lauwarmes Bad kann helfen, Fieber bei Kindern sanft zu senken, indem es die Körpertemperatur schrittweise reduziert. Wichtig ist, dass das Wasser nicht kalt, sondern etwa 1–2°C unter der Körpertemperatur liegt, um einen Kälteschock oder Schüttelfrost zu vermeiden. Das Bad sollte nur wenige Minuten dauern, und das Kind sollte danach gut abgetrocknet und warm gehalten werden. Es ist jedoch keine alleinige Maßnahme und sollte mit ausreichender Flüssigkeitszufuhr und gegebenenfalls fiebersenkenden Medikamenten kombiniert werden, wenn vom Arzt empfohlen.' },
+        { sender: 'chatgpt',
+            text: 'Ja, ein lauwarmes Bad kann helfen, Fieber bei Kindern sanft zu senken, indem es die Körpertemperatur schrittweise reduziert. Wichtig ist, dass das Wasser nicht kalt, sondern etwa 1–2°C unter der Körpertemperatur liegt, um einen Kälteschock oder Schüttelfrost zu vermeiden. Das Bad sollte nur wenige Minuten dauern, und das Kind sollte danach gut abgetrocknet und warm gehalten werden. Es ist jedoch keine alleinige Maßnahme und sollte mit ausreichender Flüssigkeitszufuhr und gegebenenfalls fiebersenkenden Medikamenten kombiniert werden, wenn vom Arzt empfohlen.',
+        }
     ];
 
     const handleNextPage = () => {
