@@ -28,9 +28,9 @@ export default function QuestionOhneQuellen_1() {
 
     const messages = [
         { sender: 'user', text: 'Hilft Selenium Krebs zu vermeiden?'},
-        { sender: 'chatgpt', text: 'Selenpräparate werden als Mittel zur Krebsprävention angepriesen. Ein sehr nützliches Dokument würde die Wirksamkeit von Selen zur Krebsprävention untersuchen. Ein hilfreiches Dokument würde einem Nutzer helfen, eine Entscheidung über die Verwendung von Selen zur Krebsprävention zu treffen, indem es Informationen über empfohlene Methoden zur Krebsprävention, die medizinische Verwendung von Selen oder beides bereitstellt.\n' +
-                '\n' +
-                'Haftungsausschluss: Wir geben keine medizinische Beratung, und medizinische Entscheidungen sollten niemals auf der von uns gewählten Position basieren. Konsultieren Sie einen Arzt für professionelle Beratung.'},
+        { sender: 'chatgpt',
+            text: 'Es gibt Hinweise darauf, dass Selen eine Rolle beim Schutz vor bestimmten Krebsarten spielen könnte, da es antioxidative Eigenschaften besitzt und zur Unterstützung des Immunsystems beiträgt. Allerdings sind die wissenschaftlichen Ergebnisse uneinheitlich. Einige Studien deuten darauf hin, dass eine ausreichende Selenzufuhr mit einem geringeren Risiko für bestimmte Krebsarten wie Prostata-, Lungen- oder Darmkrebs verbunden sein könnte, während andere keinen klaren Nutzen zeigen. Eine übermäßige Selenzufuhr kann zudem gesundheitsschädlich sein. Der beste Weg, Selen aufzunehmen, ist eine ausgewogene Ernährung mit selenreichen Lebensmitteln wie Nüssen, Fisch und Fleisch, anstatt hochdosierte Ergänzungsmittel einzunehmen.',
+        },
     ];
 
     const handleNextPage = () => {

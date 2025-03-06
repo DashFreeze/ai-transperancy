@@ -28,9 +28,9 @@ export default function QuestionOhneQuellen_1() {
 
     const messages = [
         { sender: 'user', text: 'Hilft fermentierte Milch bei Bluthochdruck?'},
-        { sender: 'chatgpt', text: 'Als wichtige Quelle für Proteine und Peptide wird fermentierten Milchprodukten zugeschrieben, bei der Kontrolle von Bluthochdruck zu helfen. Ein sehr nützliches Dokument würde die Wirksamkeit von fermentierten Milchprodukten zur Kontrolle von Bluthochdruck untersuchen. Ein hilfreiches Dokument würde einem Nutzer helfen, eine Entscheidung über fermentierte Milch zur Behandlung von Bluthochdruck zu treffen, indem es Informationen über empfohlene Behandlungen für Bluthochdruck, die Verwendung von fermentierter Milch als medizinische Behandlung oder beides bereitstellt.\n' +
-                '\n' +
-                'Haftungsausschluss: Wir geben keine medizinische Beratung, und medizinische Entscheidungen sollten niemals auf der von uns gewählten Position basieren. Konsultieren Sie einen Arzt für professionelle Beratung.'}
+        { sender: 'chatgpt',
+            text: 'Ja, fermentierte Milchprodukte wie Joghurt und Kefir können helfen, Bluthochdruck zu senken. Sie enthalten bioaktive Peptide, die während der Fermentation entstehen und eine blutdrucksenkende Wirkung haben können, indem sie das Enzym Angiotensin-Converting Enzyme (ACE) hemmen – ähnlich wie einige blutdrucksenkende Medikamente. Zudem können probiotische Bakterien in fermentierten Milchprodukten die Darmgesundheit unterstützen, was indirekt zur Regulierung des Blutdrucks beitragen kann. Studien legen nahe, dass ein regelmäßiger Konsum mit einer moderaten Blutdrucksenkung verbunden sein kann, besonders bei Menschen mit bereits erhöhtem Blutdruck.',
+        },
     ];
 
     const handleNextPage = () => {
