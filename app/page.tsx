@@ -18,7 +18,7 @@ export default function DD() {
             localStorage.setItem("userId", userId);
             localStorage.setItem("userGroup", userGroup);
 
-            const list = ["question_1", "question_2", "question_3", "question_4", "question_5", "question_6"];
+            const list = ["1", "2", "3", "4", "5", "6"];
             const randomIndex = Math.floor(Math.random() * list.length);
             const randomItem = list[randomIndex];
 
@@ -26,13 +26,13 @@ export default function DD() {
 
             if (userGroup === 0) {
                 localStorage.setItem("list", JSON.stringify(list));
-                router.push('/Questions/question_ohnequellen/' + randomItem);
+                router.push('/q/oq/' + randomItem);
             } else if (userGroup === 1) {
                 localStorage.setItem("list", JSON.stringify(list));
-                router.push('/Questions/question_mitquellen/' + randomItem);
+                router.push('/q/rq/' + randomItem);
             } else if (userGroup === 2) {
                 localStorage.setItem("list", JSON.stringify(list));
-                router.push('/Questions/question_mitfakequellen/' + randomItem);
+                router.push('/q/fq/' + randomItem);
             }
 
         } catch (error) {
