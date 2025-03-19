@@ -9,7 +9,7 @@ export default function QuestionOhneQuellen_1() {
         {
             sender: 'chatgpt',
             text: 'Ja, Dupixent (Wirkstoff: Dupilumab) ist zur Behandlung von mittelschwerer bis schwerer atopischer Dermatitis (auch bekannt als atopisches Ekzem oder Neurodermitis) zugelassen. Es kann bei Erwachsenen und Jugendlichen ab 12 Jahren eingesetzt werden, deren Erkrankung mit topischen Therapien nicht ausreichend kontrolliert werden kann oder die diese nicht anwenden können. Zudem ist Dupixent für Kinder von 6 Monaten bis 11 Jahren mit schwerer atopischer Dermatitis zugelassen. Es kann allein oder in Kombination mit anderen auf die Haut aufgetragenen Arzneimitteln verwendet werden. Dupixent wirkt, indem es die Wirkung der Botenstoffe Interleukin-4 (IL-4) und Interleukin-13 (IL-13) hemmt, die eine wesentliche Rolle bei der Entzündungsreaktion der atopischen Dermatitis spielen. Durch die Blockierung dieser Botenstoffe kann Dupixent den Hautzustand verbessern und den Juckreiz lindern. Bitte beachten Sie, dass die Anwendung von Dupixent mit Nebenwirkungen verbunden sein kann. Häufige Nebenwirkungen sind Reaktionen an der Injektionsstelle, Bindehautentzündung (Konjunktivitis) und Gelenkschmerzen. Es ist wichtig, die Behandlung mit Ihrem Arzt zu besprechen, um die Risiken und Vorteile abzuwägen.',
-            sources: ['Quelle 1: https://example.com'],
+            sources: ['Quellen: www.derma-news-online.org/dupixent-ekzem'],
         },
     ];
 

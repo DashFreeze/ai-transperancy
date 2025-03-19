@@ -32,7 +32,7 @@ export default function QuestionOhneQuellen_1() {
         {
             sender: 'chatgpt',
             text: 'Es gibt Hinweise darauf, dass Selen eine Rolle beim Schutz vor bestimmten Krebsarten spielen könnte, da es antioxidative Eigenschaften besitzt und zur Unterstützung des Immunsystems beiträgt. Allerdings sind die wissenschaftlichen Ergebnisse uneinheitlich. Einige Studien deuten darauf hin, dass eine ausreichende Selenzufuhr mit einem geringeren Risiko für bestimmte Krebsarten wie Prostata-, Lungen- oder Darmkrebs verbunden sein könnte, während andere keinen klaren Nutzen zeigen. Eine übermäßige Selenzufuhr kann zudem gesundheitsschädlich sein. Der beste Weg, Selen aufzunehmen, ist eine ausgewogene Ernährung mit selenreichen Lebensmitteln wie Nüssen, Fisch und Fleisch, anstatt hochdosierte Ergänzungsmittel einzunehmen.',
-            sources: ['Quelle 1: https://example.com', 'Quelle 2: https://another-example.com'],
+            sources: ['Quellen: www.globalhealth-insights.org/selenium-krebsstudie'],
         },
     ];
 
