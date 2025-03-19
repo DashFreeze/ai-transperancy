@@ -44,12 +44,10 @@ export default function QuestionOhneQuellen_1() {
 
     return (
         <div style={{
-            position: 'fixed',       // Verhindert Scrollen
             top: 0,                  // Fixiert den Inhalt oben
             left: 0,                 // Fixiert den Inhalt links
             width: '100vw',          // Volle Breite des Viewports
             height: '100vh',         // Volle Höhe des Viewports
-            overflow: 'hidden',      // Kein Scrollen innerhalb des Containers
             textAlign: 'center',
             marginTop: '0',          // Kein zusätzliches Margin
             backgroundColor: '#708099', // Grauer Hintergrund
