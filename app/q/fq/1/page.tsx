@@ -52,6 +52,7 @@ export default function QuestionOhneQuellen_1() {
             marginTop: '0',          // Kein zusätzliches Margin
             backgroundColor: '#708099', // Grauer Hintergrund
             color: '#fff',           // Weißer Text
+            overflow: 'auto',
             padding: '15px',
             boxSizing: 'border-box'
         }}>
