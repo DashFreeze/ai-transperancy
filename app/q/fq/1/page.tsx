@@ -4,29 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function QuestionOhneQuellen_1() {
-
-    useEffect(() => {
-        setTimeout(() => {
-            document.documentElement.style.overflow = 'hidden';
-            document.documentElement.style.height = '100%';
-            document.body.style.overflow = 'hidden';
-            document.body.style.height = '100%';
-            document.body.style.margin = '0';
-        }, 0);
-
-        return () => {
-            document.documentElement.style.overflow = '';
-            document.documentElement.style.height = '';
-            document.body.style.overflow = '';
-            document.body.style.height = '';
-            document.body.style.margin = '';
-        };
-    }, []);
-
-
     const router = useRouter();
-
-
     const messages = [
         { sender: 'user', text: 'Kann Dupixent Ekzeme behandeln?', sources: [] },
         {
@@ -44,12 +22,9 @@ export default function QuestionOhneQuellen_1() {
 
     return (
         <div style={{
-            top: 0,                  // Fixiert den Inhalt oben
-            left: 0,                 // Fixiert den Inhalt links
-            width: '100vw',          // Volle Breite des Viewports
+            width: '100%',          // Volle Breite des Viewports
             height: '100vh',         // Volle Höhe des Viewports
             textAlign: 'center',
-            marginTop: '0',          // Kein zusätzliches Margin
             backgroundColor: '#708099', // Grauer Hintergrund
             color: '#fff',           // Weißer Text
             overflow: 'auto',
