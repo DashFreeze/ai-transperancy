@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { saveDemographics } from '../lib/data';
 import { useRouter } from 'next/navigation';
 
@@ -30,13 +30,15 @@ export default function Home() {
     const [geschlecht, setGeschlecht] = useState('');
     const [abschluss, setAbschluss] = useState('');
     const [beruf, setBeruf] = useState('');
+    const [showMatrikel, setShowMatrikel] = useState(false);
+    const [matrikelnummer, setMN] = useState('');
 
     // Erstmal zu Question_ohnequellen, brauche noch random gruppeneinteilung
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         if (vorname && nachname && age && geschlecht && abschluss && beruf) {
             localStorage.getItem('userId');
-            saveDemographics(parseInt(localStorage.getItem('userId') || '0'), vorname, nachname, age, geschlecht, abschluss, beruf);
+            saveDemographics(parseInt(localStorage.getItem('userId') || '0'), vorname, nachname, age, geschlecht, abschluss, beruf, matrikelnummer);
             localStorage.clear();
             router.push('/end')
         } else {
@@ -56,35 +58,36 @@ export default function Home() {
             marginTop: '0',          // Kein zusätzliches Margin
             backgroundColor: '#708090', // Grauer Hintergrund
             color: '#000',           // Weißer Text
-            padding: '20px'}}>
-            <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '20px'}}>Bitte tragen Sie die benötigten Daten ein:</h1>
+            padding: '20px'
+        }}>
+            <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '20px' }}>Bitte tragen Sie die benötigten Daten ein:</h1>
             <div className='form flex-direction-column'>
-                <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <input
                         type="text"
                         placeholder="Vorname"
                         value={vorname}
                         onChange={(e) => setVorname(e.target.value)}
-                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
                     />
                     <input
                         type="text"
                         placeholder="Nachname"
                         value={nachname}
                         onChange={(e) => setNachname(e.target.value)}
-                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
                     />
                     <input
                         type="number"
                         placeholder="Alter"
                         value={age}
                         onChange={(e) => setAge(e.target.value)}
-                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
                     />
                     <select
                         value={geschlecht}
                         onChange={(e) => setGeschlecht(e.target.value)}
-                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px', width: '215px', borderRadius: '4px'}}
+                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px', width: '215px', borderRadius: '4px' }}
                     >
                         <option value="" disabled>Wähle dein Geschlecht</option>
                         <option value="männlich">Männlich</option>
@@ -96,15 +99,51 @@ export default function Home() {
                         placeholder="Abschluss"
                         value={abschluss}
                         onChange={(e) => setAbschluss(e.target.value)}
-                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
                     />
                     <input
                         type="text"
                         placeholder="Beruf"
                         value={beruf}
                         onChange={(e) => setBeruf(e.target.value)}
-                        style={{padding: '10px', fontSize: '16px', marginBottom: '10px'}}
+                        style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
                     />
+                    <div style={{ marginBottom: '10px' }}>
+                        <p style={{ color: '#fff', marginBottom: '5px' }}>Möchten Sie VP-Stunden erhalten?</p>
+                        <label style={{ color: '#fff', marginRight: '20px' }}>
+                            <input
+                                type="radio"
+                                name="vpChoice"
+                                value="yes"
+                                onChange={() => setShowMatrikel(true)}
+                                style={{ marginRight: '5px' }}
+                            />
+                            Ja
+                        </label>
+                        <label style={{ color: '#fff' }}>
+                            <input
+                                type="radio"
+                                name="vpChoice"
+                                value="no"
+                                onChange={() => {
+                                    setShowMatrikel(false);
+                                    setMN('');
+                                }}
+                                style={{ marginRight: '5px' }}
+                            />
+                            Nein
+                        </label>
+                    </div>
+
+                    {showMatrikel && (
+                        <input
+                            type="number"
+                            placeholder="Matrikelnummer"
+                            value={matrikelnummer}
+                            onChange={(e) => setMN(e.target.value)}
+                            style={{ padding: '10px', fontSize: '16px', marginBottom: '10px' }}
+                        />
+                    )}
 
                     <button type="submit" style={{
                         margin: '20px',

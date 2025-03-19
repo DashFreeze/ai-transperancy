@@ -2,6 +2,30 @@
 
 import { sql } from '@vercel/postgres';
 
+export async function createUsersTable() {
+  try {
+    const result = await sql`
+      CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        gruppe INTEGER,
+        vorname VARCHAR(255),
+        nachname VARCHAR(255),
+        age INTEGER,
+        geschlecht VARCHAR(50),
+        abschluss VARCHAR(255),
+        beruf VARCHAR(255),
+        matrikelnummer VARCHAR(50),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `;
+    console.log('Users table created successfully');
+    return result;
+  } catch (error) {
+    console.error('Error creating users table:', error);
+    throw error;
+  }
+}
+
 export async function createUserId() {
   try {
     const result = await sql`
@@ -39,7 +63,7 @@ export async function saveAnswer(userId: number, question: string, answer: strin
   }
 }
 
-export async function saveDemographics(userId: number, vorname: string, nachname: string, age: string, geschlecht: string, abschluss: string, beruf: string) {
+export async function saveDemographics(userId: number, vorname: string, nachname: string, age: string, geschlecht: string, abschluss: string, beruf: string, matrikelnummer: string) {
   try {
     const result = await sql`
       UPDATE users
@@ -48,7 +72,8 @@ export async function saveDemographics(userId: number, vorname: string, nachname
           age = ${age}, 
           geschlecht = ${geschlecht}, 
           abschluss = ${abschluss}, 
-          beruf = ${beruf}
+          beruf = ${beruf},
+          matrikelnummer = ${matrikelnummer}
       WHERE id = ${userId}
       RETURNING *;
     `;
