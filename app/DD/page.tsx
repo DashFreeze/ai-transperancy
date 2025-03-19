@@ -1,6 +1,7 @@
 'use client'
 import {useEffect, useState} from 'react';
 import { saveDemographics } from '../lib/data';
+import { useRouter } from 'next/navigation';
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         };
     }, []);
 
+    const router = useRouter();
     const [vorname, setVorname] = useState('');
     const [nachname, setNachname] = useState('');
     const [age, setAge] = useState('');
@@ -36,7 +38,7 @@ export default function Home() {
             localStorage.getItem('userId');
             saveDemographics(parseInt(localStorage.getItem('userId') || '0'), vorname, nachname, age, geschlecht, abschluss, beruf);
             localStorage.clear();
-            alert('Vielen Dank für Ihre Teilnahme!');
+            router.push('/end')
         } else {
             alert('Bitte füllen Sie die benötigten Daten aus.');
         }
