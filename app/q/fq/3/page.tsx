@@ -1,28 +1,8 @@
 'use client';
-import { useEffect } from 'react';
 
 import { useRouter } from 'next/navigation';
 
 export default function QuestionOhneQuellen_1() {
-
-    useEffect(() => {
-        setTimeout(() => {
-            document.documentElement.style.overflow = 'hidden';
-            document.documentElement.style.height = '100%';
-            document.body.style.overflow = 'hidden';
-            document.body.style.height = '100%';
-            document.body.style.margin = '0';
-        }, 0);
-
-        return () => {
-            document.documentElement.style.overflow = '';
-            document.documentElement.style.height = '';
-            document.body.style.overflow = '';
-            document.body.style.height = '';
-            document.body.style.margin = '';
-        };
-    }, []);
-
 
     const router = useRouter();
 
@@ -70,9 +50,11 @@ export default function QuestionOhneQuellen_1() {
                 backgroundColor: '#333', // Dunkler Hintergrund für den Chat-Container
             }}>
                 <div className="chat-box" style={{
+                    overflowY: 'auto',
                     maxHeight: '500px',
-                    overflowY: 'hidden',
                     marginBottom: '20px',
+                    padding: '10px',
+                    borderRadius: '8px',
                 }}>
                     {messages.map((message, index) => (
                         <div key={index} style={{ marginBottom: '10px' }}>
