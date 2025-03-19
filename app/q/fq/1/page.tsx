@@ -1,4 +1,5 @@
 'use client';
+
 import { useRouter } from 'next/navigation';
 
 export default function QuestionOhneQuellen_1() {
@@ -43,9 +44,11 @@ export default function QuestionOhneQuellen_1() {
                 backgroundColor: '#333', // Dunkler Hintergrund für den Chat-Container
             }}>
                 <div className="chat-box" style={{
+                    overflowY: 'auto',
                     maxHeight: '500px',
-                    overflowY: 'hidden',
                     marginBottom: '20px',
+                    padding: '10px',
+                    borderRadius: '8px',
                 }}>
                     {messages.map((message, index) => (
                         <div key={index} style={{ marginBottom: '10px' }}>
