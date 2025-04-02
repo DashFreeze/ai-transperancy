@@ -67,7 +67,8 @@ export default function DD() {
             </h1>
 
             <p style={{ marginBottom: '20px' }}>
-                Sie sind eingeladen, an der Onlinestudie &#34;Name noch unbekannt:&#34; teilzunehmen. Die Studie wird
+                Sie sind eingeladen, an der Onlinestudie &#34;The Impact of Source Attribution on the Perceived Credibility of
+                Generative AI Responses:&#34; teilzunehmen. Die Studie wird
                 von Philipp Schwarzer, Michael Winter und Maximilian Schnabel durchgeführt und von PD Dr. David
                 Elsweiler an der Universität Regensburg geleitet.
                 Die Studie mit voraussichtlich 40 Teilnehmer findet im Zeitraum vom 15.02.2025 bis 30.03.2025
