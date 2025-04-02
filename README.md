@@ -32,14 +32,14 @@ In this study, we explored whether the inclusion of real, fake, or no sources in
 - Fake or unverifiable references can damage user trust.
 - Users value transparency and the ability to fact-check.
 
-  📚 Citation
+##  📚 Citation
 If you use this work, please cite our paper:
 
 Schnabel, Winter, Schwarzer (2025)
 The Impact of Source Attribution on the Perceived Credibility of Generative AI Responses
 University of Regensburg
 
-📬 Contact
+## 📬 Contact
 Maximilian Schnabel – maximilian.schnabel@stud.uni-regensburg.de
 
 Michael Winter – michael1.winter@stud.uni-regensburg.de
