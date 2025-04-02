@@ -1,50 +1,48 @@
-AI Transparency: Einfluss von Quellenangaben auf die Glaubwürdigkeit von generativen KI-Antworten
-Dieses Projekt basiert auf einer wissenschaftlichen Studie zur Frage, wie sich die Angabe von Quellen in KI-generierten medizinischen Antworten auf deren wahrgenommene Glaubwürdigkeit auswirkt.
+# 🧠 AI Transparency: The Impact of Source Attribution on AI Credibility
 
-📄 Abstract
-In dieser Studie untersuchen wir, ob und in welchem Ausmaß Quellenangaben – ob korrekt, gefälscht oder nicht vorhanden – die Glaubwürdigkeit von KI-generierten Antworten beeinflussen. 36 Teilnehmende wurden zufällig einer von drei Gruppen zugewiesen, die medizinische Antworten mit unterschiedlichen Arten von Quellen sahen. Die Ergebnisse zeigen: Echte Quellen erhöhen die wahrgenommene Glaubwürdigkeit signifikant, während gefälschte Quellen sie senken. Fehlen Quellen ganz, hat das einen neutraleren Effekt.
+This project investigates how **source attribution** affects the **perceived credibility** of generative AI responses — particularly in medical contexts. It aims to provide insights into user trust in AI systems and highlights the importance of **accurate citations**.
 
-🎯 Ziel der Studie
-Beantwortung der Forschungsfrage:
-„In welchem Ausmaß beeinflusst das Vorhandensein und die Richtigkeit von Quellenangaben in generativen KI-Antworten die wahrgenommene Glaubwürdigkeit?“
+## 📄 Abstract
 
-🧪 Methodik
-Teilnehmende: 36 Personen (Alter: 20–30 Jahre)
+In this study, we explored whether the inclusion of real, fake, or no sources in AI-generated responses influences how credible people perceive the information to be. Our findings show that responses with **accurate sources** were rated as significantly more trustworthy compared to those with **fabricated sources**. No significant difference was found between responses with no sources and fake sources.
 
-Design: Between-subjects, 3 Gruppen:
+## 🧪 Methodology
 
-Echte Quellen (z.B. PubMed)
+- **Participants**: 36 individuals aged 20–30  
+- **Design**: Between-groups experiment  
+- **Conditions**:
+  - AI responses with accurate sources
+  - AI responses with fabricated sources
+  - AI responses with no sources  
+- **Task**: Rate the credibility of 6 AI-generated medical answers  
+- **Analysis**:
+  - Quantitative: Kruskal-Wallis & Mann-Whitney U-tests
+  - Qualitative: Free-text responses on credibility perception
 
-Gefälschte, aber plausible Quellen
+## 📊 Results
 
-Keine Quellen
+- **Highest credibility**: Responses with real sources (Mean = 5.19)
+- **Lowest credibility**: Responses with fake sources (Mean = 4.47)
+- **Significant difference** between real vs. fake sources (*p = 0.0285*)
+- **No significant difference** between fake and no sources
 
-Aufgabe: Bewertung von 6 medizinischen Antworten pro Person via 7-Punkte-Likert-Skala + Freitext
+## 💡 Key Takeaways
 
-Fragen: Medizinisch, bewusst aus Bereichen mit geringem Vorwissen gewählt
+- Verifiable citations boost AI credibility.
+- Fake or unverifiable references can damage user trust.
+- Users value transparency and the ability to fact-check.
 
-📊 Ergebnisse
-Signifikanter Unterschied zwischen echten und gefälschten Quellen (p = 0.0285)
+  📚 Citation
+If you use this work, please cite our paper:
 
-Keine signifikanten Unterschiede zwischen:
-
-Keine Quelle vs. Echte Quelle
-
-Keine Quelle vs. Gefälschte Quelle
-
-Qualitativ: Vertrauen hängt stark von Verifizierbarkeit und Bekanntheit der Quelle ab
-
-💡 Fazit
-Die Studie unterstreicht die Relevanz akkurater Quellenangaben in KI-Systemen zur Förderung von Vertrauen. Nur die bloße Existenz einer Quelle reicht nicht – die Quelle muss auch nachvollziehbar und echt sein. Gleichzeitig zeigt sich ein kognitiver Bias hin zu scheinbar vertrauenswürdigen Namen wie „PubMed“, selbst ohne Linkprüfung.
-
-🧑‍💻 Mitwirkende
-Maximilian Schnabel
-
-Michael Winter
-
-Philipp Schwarzer
+Schnabel, Winter, Schwarzer (2025)
+The Impact of Source Attribution on the Perceived Credibility of Generative AI Responses
 University of Regensburg
 
-📬 Kontakt
-Fragen, Feedback oder Interesse an Zusammenarbeit?
-📧 Maximilian.Schnabel@stud.uni-regensburg.de
+📬 Contact
+Maximilian Schnabel – maximilian.schnabel@stud.uni-regensburg.de
+
+Michael Winter – michael1.winter@stud.uni-regensburg.de
+
+Philipp Schwarzer – philipp.schwarzer@stud.uni-regensburg.de
+
