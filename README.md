@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+AI Transparency: Einfluss von Quellenangaben auf die Glaubwürdigkeit von generativen KI-Antworten
+Dieses Projekt basiert auf einer wissenschaftlichen Studie zur Frage, wie sich die Angabe von Quellen in KI-generierten medizinischen Antworten auf deren wahrgenommene Glaubwürdigkeit auswirkt.
 
-## Getting Started
+📄 Abstract
+In dieser Studie untersuchen wir, ob und in welchem Ausmaß Quellenangaben – ob korrekt, gefälscht oder nicht vorhanden – die Glaubwürdigkeit von KI-generierten Antworten beeinflussen. 36 Teilnehmende wurden zufällig einer von drei Gruppen zugewiesen, die medizinische Antworten mit unterschiedlichen Arten von Quellen sahen. Die Ergebnisse zeigen: Echte Quellen erhöhen die wahrgenommene Glaubwürdigkeit signifikant, während gefälschte Quellen sie senken. Fehlen Quellen ganz, hat das einen neutraleren Effekt.
 
-First, run the development server:
+🎯 Ziel der Studie
+Beantwortung der Forschungsfrage:
+„In welchem Ausmaß beeinflusst das Vorhandensein und die Richtigkeit von Quellenangaben in generativen KI-Antworten die wahrgenommene Glaubwürdigkeit?“
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🧪 Methodik
+Teilnehmende: 36 Personen (Alter: 20–30 Jahre)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Design: Between-subjects, 3 Gruppen:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Echte Quellen (z.B. PubMed)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Gefälschte, aber plausible Quellen
 
-## Learn More
+Keine Quellen
 
-To learn more about Next.js, take a look at the following resources:
+Aufgabe: Bewertung von 6 medizinischen Antworten pro Person via 7-Punkte-Likert-Skala + Freitext
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fragen: Medizinisch, bewusst aus Bereichen mit geringem Vorwissen gewählt
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📊 Ergebnisse
+Signifikanter Unterschied zwischen echten und gefälschten Quellen (p = 0.0285)
 
-## Deploy on Vercel
+Keine signifikanten Unterschiede zwischen:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Keine Quelle vs. Echte Quelle
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Keine Quelle vs. Gefälschte Quelle
+
+Qualitativ: Vertrauen hängt stark von Verifizierbarkeit und Bekanntheit der Quelle ab
+
+💡 Fazit
+Die Studie unterstreicht die Relevanz akkurater Quellenangaben in KI-Systemen zur Förderung von Vertrauen. Nur die bloße Existenz einer Quelle reicht nicht – die Quelle muss auch nachvollziehbar und echt sein. Gleichzeitig zeigt sich ein kognitiver Bias hin zu scheinbar vertrauenswürdigen Namen wie „PubMed“, selbst ohne Linkprüfung.
+
+🧑‍💻 Mitwirkende
+Maximilian Schnabel
+
+Michael Winter
+
+Philipp Schwarzer
+University of Regensburg
+
+📬 Kontakt
+Fragen, Feedback oder Interesse an Zusammenarbeit?
+📧 Maximilian.Schnabel@stud.uni-regensburg.de
